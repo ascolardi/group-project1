@@ -1,4 +1,4 @@
-var tableBody = document.getElementById('table');
+// var tableBody = document.getElementById('table');
 var fetchButton = document.getElementById('button');
 
 function getApi() {
@@ -22,16 +22,14 @@ function getApi() {
         console.log(mealId)
       
         function showStored() {
-            // var showName = localStorage.getItem("Name");
-            // var showType = localStorage.getItem("Type");
-            // var showDate = localStorage.getItem("Date");
+            
             var newRow = `<tr>
-                            <td>${meals}
-                            <td> <img src = "${mealImage}">
-                            <td>${mealId}
+                            <td> ${meals}
+                            <td> <img src = "${mealImage}" id= "meal-image">
+                            <td> <button type="button" class="btn btn-primary">See Recipe</button>
                           </tr>`
             $('#infoTable tbody').append(newRow);
-            /*localStorage.clear();*/
+           
         }
 
         showStored();
