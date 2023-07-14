@@ -16,7 +16,7 @@ function getApi() {
         var meals = data.meals[i].strMeal
         var mealImage = data.meals[i].strMealThumb
         
-      
+        console.log(data)
         // console.log(meals)
         // console.log(mealImage)
         // console.log(mealId)
@@ -26,7 +26,7 @@ function getApi() {
             var newRow = `<tr>
                             <td> ${meals}
                             <td> <img src = "${mealImage}" id= "meal-image">
-                            <td> <button id="recipe-button" type="button" class="btn btn-primary">See Recipe</button>
+                            <td> <button data-meal="${mealId}" class="recipe-button" type="button" class="btn btn-primary">See Recipe</button>
                           </tr>`
             $('#infoTable tbody').append(newRow);
            
@@ -36,16 +36,19 @@ function getApi() {
 
       }
     
-      $(data).each(function(index, meal){
-        console.log(meal);
-        var buttonClick = $('#recipe-button');
-        console.log(buttonClick);
-        $(buttonClick).on("click", function(){
+        // data.meals.forEach(function(meal, index){
+        // console.log(meal);
+        // console.log(index)
+        // var buttonClick = $('.recipe-button');
+        // buttonClick.data("id", meal.idMeal)
+        // console.log(buttonClick);
+        $(".recipe-button").on("click", function(){
           // var mealLookUp = $(data.meals[i]);
-          console.log(mealId);
-          localStorage.setItem(index, mealId);
+          var mealId = $(this).data("meal")
+          localStorage.setItem("mealId", mealId);
+          window.location = "recipe-page.html"
         })
-      })
+      // })
     })
   }
 
