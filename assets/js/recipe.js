@@ -3,7 +3,7 @@
 
 
 var recipeId = localStorage.getItem("mealId")
-
+const ingredients = []
 
 function getApi() {
     // fetch request gets a list of all the repos for the node.js organization
@@ -30,9 +30,8 @@ function getApi() {
         // adds coocking instructions
         var instructions = meal.strInstructions;
         var mealInstructions = $('#cooking-instructions');
-        mealInstructions.text(instructions);
+        mealInstructions.text(instructions);        
         
-        const ingredients = []
 
         for(i=1; i<=20; i++){
             const obj = { ingredient: "", measure: "" }
@@ -46,14 +45,40 @@ function getApi() {
             }
         }
 
+        console.log(ingredients.length)
+
+
+
         
 
         console.log(ingredients)
 
 
-
+        showIngredients();
     })
 
+}
+
+function showIngredients() {
+    for (x = 0; x < ingredients.length; x++) {
+        var ingred = []
+        var amounts = []
+        ingred.push(ingredients[`${x}`].ingredient)
+        amounts.push(ingredients[`${x}`].measure)
+         
+        console.log(ingredients[`${x}`]);
+        console.log(ingred)
+        console.log(amounts)
+
+    
+
+    var newRow = `<tr>
+                    <td>${ingred}
+                    <td>${amounts}
+                  </tr>`  
+    
+    $('#ingredients tbody').append(newRow);
+    }              
 }
 
 getApi()
