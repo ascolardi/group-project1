@@ -1,4 +1,4 @@
-
+var ingredientText = document.getElementById('ingredients')
 
 
 
@@ -28,10 +28,10 @@ function getApi() {
         
 
         // adds coocking instructions
-        var instructions = meal.strInstructions;
-        var mealInstructions = $('#cooking-instructions');
-        mealInstructions.text(instructions);        
-        
+        var instructions = meal.strInstructions.replace(/(?:\r\n|\r|\n)/g, '<br>');
+        console.log(instructions)
+        var mealInstructions = document.getElementById('cooking-instructions');
+        mealInstructions.innerHTML = `${instructions}`
 
         for(i=1; i<=20; i++){
             const obj = { ingredient: "", measure: "" }
@@ -66,12 +66,6 @@ function showIngredients() {
         ingred.push(ingredients[`${x}`].ingredient)
         amounts.push(ingredients[`${x}`].measure)
          
-        console.log(ingredients[`${x}`]);
-        console.log(ingred)
-        console.log(amounts)
-
-    
-
     var newRow = `<tr>
                     <td>${ingred}
                     <td>${amounts}
