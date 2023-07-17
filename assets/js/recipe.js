@@ -36,16 +36,17 @@ function getApi() {
 
         for(i=1; i<=20; i++){
             const obj = { ingredient: "", measure: "" }
-            if( meal[`strIngredient${i}`] ){
+            if( meal[`strIngredient${i}`] && meal[`strMeasure${i}`] ){
                 obj.ingredient = meal[`strIngredient${i}`]
-            }
-
-            if( meal[`strMeasure${i}`] ){
                 obj.measure = meal[`strMeasure${i}`]
+                ingredients.push(obj)
             }
-
-            ingredients.push(obj)
+            else {
+                break
+            }
         }
+
+        
 
         console.log(ingredients)
 
