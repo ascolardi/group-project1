@@ -28,9 +28,10 @@ function getApi() {
         
 
         // adds coocking instructions
-        var instructions = meal.strInstructions;
-        var mealInstructions = $('#cooking-instructions');
-        mealInstructions.text(instructions);        
+        var instructions = meal.strInstructions.replace(/(?:\r\n|\r|\n)/g, '<br>');
+
+        var mealInstructions = document.getElementById('cooking-instructions');
+        mealInstructions.innerHTML = `${instructions}`;        
         
 
         for(i=1; i<=20; i++){
