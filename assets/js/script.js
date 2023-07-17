@@ -1,9 +1,10 @@
 // var tableBody = document.getElementById('table');
 var fetchButton = document.getElementById('button');
 
+
 function getApi() {
   // fetch request gets a list of all the repos for the node.js organization
-  var requestUrl = 'https://www.themealdb.com/api/json/v1/1/filter.php?i=beef';
+  var requestUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${base}`;
 
   fetch(requestUrl)
     .then(function (response) {
