@@ -31,22 +31,23 @@ function getApi() {
         var instructions = meal.strInstructions;
         var mealInstructions = $('#cooking-instructions');
         mealInstructions.text(instructions);
+        
+        const ingredients = []
 
         for(i=1; i<=20; i++){
-            console.log(`meal.strIngredient${i}`)
+            const obj = { ingredient: "", measure: "" }
+            if( meal[`strIngredient${i}`] ){
+                obj.ingredient = meal[`strIngredient${i}`]
+            }
+
+            if( meal[`strMeasure${i}`] ){
+                obj.measure = meal[`strMeasure${i}`]
+            }
+
+            ingredients.push(obj)
         }
 
-        var ingredients = $(meal).slice(7,27)
-
-
-        
         console.log(ingredients)
-        
-        console.log(meal.strMeasure1)
-
-
-
-
 
 
 
