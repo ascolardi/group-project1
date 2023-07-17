@@ -1,3 +1,5 @@
+var fetchButton = document.getElementById('button');
+
 var formBtn = document.querySelector(".mainBtn");
 var formEl = document.querySelector(".form-select")
 
@@ -8,4 +10,3 @@ formBtn.addEventListener('click', function(){
   localStorage.setItem("Main Ingredient", proteinEl);
 
 })
-

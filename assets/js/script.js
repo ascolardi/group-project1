@@ -1,9 +1,15 @@
 // var tableBody = document.getElementById('table');
-var fetchButton = document.getElementById('button');
 
 
-function getApi() {
-  // fetch request gets a list of all the repos for the node.js organization
+
+var base = localStorage.getItem("Main Ingredient");
+console.log(base)
+getApi();
+
+
+function getApi() {  
+  // fetch request gets a list of all the repos for the
+  //node.js organization
   var requestUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${base}`;
 
   fetch(requestUrl)
@@ -56,4 +62,3 @@ function getApi() {
         
 
 
-fetchButton.addEventListener('click', getApi);
