@@ -23,6 +23,11 @@ header h1{
     width: 400px;
     height: 400px;
 }
+
+.card-text{
+    font-size: 20px;
+}
+
 .row{
     margin:20px;
 }
