@@ -1,7 +1,4 @@
-
-
-
-
+var ingredientText = document.getElementById('ingredients')
 var recipeId = localStorage.getItem("mealId")
 const ingredients = []
 
@@ -13,9 +10,6 @@ function getApi() {
     }).then(function (data) {
         var meal = data.meals[0]
 
-        console.log(meal)
-
-
         // adds meal name to top of page
         var mealName = meal.strMeal;
         var mealTitle = $('#card-title');
@@ -25,12 +19,7 @@ function getApi() {
         var mealImage = meal.strMealThumb;
         var mealPic = $('#food-image');
         mealPic.attr('src', mealImage);
-        
-
-
-        
-        //mealInstructions.innerHTML = `${instructions}`;        
-        
+   
 
         for(i=1; i<=20; i++){
             const obj = { ingredient: "", measure: "" }
@@ -44,7 +33,7 @@ function getApi() {
             }
         }
 
-                // adds coocking instructions
+        // adds coocking instructions
         var instructions = meal.strInstructions.replace(/(?:\r\n|\r|\n)/g, '');
         for (i = 0; i <= ingredients.length; i++) {
             var newInstructions = [];
@@ -52,17 +41,6 @@ function getApi() {
             $('#cooking-instructions').append(`<p id='instructions${i}' class='instruction-text'>${newInstructions}</p>`)
         }    
     
-        console.log(ingredients.length)
-        console.log(instructions.length)
-        console.log(instructions)
-        console.log(newInstructions)
-
-
-        
-
-        console.log(ingredients)
-
-
         showIngredients();
     })
 
@@ -75,12 +53,6 @@ function showIngredients() {
         ingred.push(ingredients[`${x}`].ingredient)
         amounts.push(ingredients[`${x}`].measure)
          
-        console.log(ingredients[`${x}`]);
-        console.log(ingred)
-        console.log(amounts)
-
-    
-
     var newRow = `<tr>
                     <td>${ingred}
                     <td>${amounts}
