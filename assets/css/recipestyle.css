@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
 
 body{
   text-align: center;
@@ -18,3 +22,7 @@ header h1{
   font-size: 50px;
 }
 
+#cooking-instructions p {
+  margin-bottom: -3px;
+  font-size: 20px;
+}
