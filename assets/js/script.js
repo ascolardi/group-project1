@@ -31,7 +31,7 @@ function getApi() {
         function showStored() {
             
         
-          var newCard = `<div class="card row">
+          var newCard = `<div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12">
                           <img src = "${mealImage}" id="cardImg${i}" class="card-img-top">
                          <div class = "card-body">
                           <h2 class = "card-text">${meals}</h2>
@@ -39,7 +39,7 @@ function getApi() {
                          </div>
                         </div>
           `
-          $('.container').append(newCard);
+          $('.container .row').append(newCard);
         }
 
         showStored();
