@@ -18,12 +18,12 @@ function getApi() {
 
         // adds meal name to top of page
         var mealName = meal.strMeal;
-        var mealTitle = $('#meal-title');
+        var mealTitle = $('#card-title');
         mealTitle.text(mealName);
 
         // adds meal image to page
         var mealImage = meal.strMealThumb;
-        var mealPic = $('#meal-image');
+        var mealPic = $('#food-image');
         mealPic.attr('src', mealImage);
         
 
@@ -78,7 +78,7 @@ function showIngredients() {
                     <td>${amounts}
                   </tr>`  
     
-    $('#ingredients tbody').append(newRow);
+    $('#ingredients-tbody').append(newRow);
     }              
 }
 
