@@ -14,24 +14,21 @@ header h1{
     font-size: 50px;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-#cardImg{
-    height: 200px;
-    width: 200px;
-    margin:20px;
+.card-img-top{
+    height: 250px;
+    width: 250px;
 }
 
 .card{
-    width: 50%;
+    width: 400px;
+    height: 400px;
 }
-
-
 .row{
     margin:20px;
+}
+
+.recipe-button{
+    padding: 3px;
 }
 
 

@@ -31,8 +31,8 @@ function getApi() {
         function showStored() {
             
         
-          var newCard = `<div class="card">
-                          <img src = "${mealImage}" id="cardImg">
+          var newCard = `<div class="card row">
+                          <img src = "${mealImage}" id="cardImg${i}" class="card-img-top">
                          <div class = "card-body">
                           <h2 class = "card-text">${meals}</h2>
                           <button data-meal="${mealId}" class="recipe-button" type="button" class="btn btn-primary">See Recipe</button>
