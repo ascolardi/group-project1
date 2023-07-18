@@ -30,13 +30,16 @@ function getApi() {
       
         function showStored() {
             
-            var newRow = `<tr>
-                            <td> ${meals}
-                            <td> <img src = "${mealImage}" id= "meal-image">
-                            <td> <button data-meal="${mealId}" class="recipe-button" type="button" class="btn btn-primary">See Recipe</button>
-                          </tr>`
-            $('#infoTable tbody').append(newRow);
-           
+        
+          var newCard = `<div class="card">
+                          <img src = "${mealImage}" id="cardImg">
+                         <div class = "card-body">
+                          <h2 class = "card-text">${meals}</h2>
+                          <button data-meal="${mealId}" class="recipe-button" type="button" class="btn btn-primary">See Recipe</button>
+                         </div>
+                        </div>
+          `
+          $('.container').append(newCard);
         }
 
         showStored();
