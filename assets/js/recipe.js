@@ -18,15 +18,19 @@ function getApi() {
 
         // adds meal name to top of page
         var mealName = meal.strMeal;
-        var mealTitle = $('#meal-title');
+        var mealTitle = $('#card-title');
         mealTitle.text(mealName);
 
         // adds meal image to page
         var mealImage = meal.strMealThumb;
-        var mealPic = $('#meal-image');
+        var mealPic = $('#food-image');
         mealPic.attr('src', mealImage);
         
 
+
+        
+        //mealInstructions.innerHTML = `${instructions}`;        
+        
         // adds coocking instructions
         var instructions = meal.strInstructions.replace(/(?:\r\n|\r|\n)/g, '<br>');
         console.log(instructions)
@@ -45,8 +49,18 @@ function getApi() {
             }
         }
 
+                // adds coocking instructions
+        var instructions = meal.strInstructions.replace(/(?:\r\n|\r|\n)/g, '');
+        for (i = 0; i <= ingredients.length; i++) {
+            var newInstructions = [];
+            newInstructions.push(instructions.split('.')[i]);
+            $('#cooking-instructions').append(`<p id='instructions${i}' class='instruction-text'>${newInstructions}</p>`)
+        }    
+    
         console.log(ingredients.length)
-
+        console.log(instructions.length)
+        console.log(instructions)
+        console.log(newInstructions)
 
 
         
@@ -71,7 +85,7 @@ function showIngredients() {
                     <td>${amounts}
                   </tr>`  
     
-    $('#ingredients tbody').append(newRow);
+    $('#ingredients-tbody').append(newRow);
     }              
 }
 
