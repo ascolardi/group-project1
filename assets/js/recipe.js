@@ -27,11 +27,9 @@ function getApi() {
         mealPic.attr('src', mealImage);
         
 
-        // adds coocking instructions
-        var instructions = meal.strInstructions.replace(/(?:\r\n|\r|\n)/g, '<br>');
 
-        var mealInstructions = document.getElementById('cooking-instructions');
-        mealInstructions.innerHTML = `${instructions}`;        
+        
+        //mealInstructions.innerHTML = `${instructions}`;        
         
 
         for(i=1; i<=20; i++){
@@ -46,8 +44,18 @@ function getApi() {
             }
         }
 
+                // adds coocking instructions
+        var instructions = meal.strInstructions.replace(/(?:\r\n|\r|\n)/g, '');
+        for (i = 0; i <= ingredients.length; i++) {
+            var newInstructions = [];
+            newInstructions.push(instructions.split('.')[i]);
+            $('#cooking-instructions').append(`<p id='instructions${i}' class='instruction-text'>${newInstructions}</p>`)
+        }    
+    
         console.log(ingredients.length)
-
+        console.log(instructions.length)
+        console.log(instructions)
+        console.log(newInstructions)
 
 
         
