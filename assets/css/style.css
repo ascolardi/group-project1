@@ -14,11 +14,19 @@ header h1{
     font-size: 50px;
 }
 
-
-#meal-image{
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#cardImg{
     height: 200px;
     width: 200px;
     margin:20px;
+}
+
+.card{
+    width: 50%;
 }
 
 
