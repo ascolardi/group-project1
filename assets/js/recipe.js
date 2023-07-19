@@ -4,7 +4,7 @@ const ingredients = []
 
 function getApi() {
     // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = 'https://www.themealdb.com/api/json/v1/1/lookup.php?' + recipeId;
+    var requestUrl = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + recipeId;
     fetch(requestUrl).then(function (res) {
         return res.json()
     }).then(function (data) {
