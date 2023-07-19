@@ -3,6 +3,18 @@
 
 
 var base = localStorage.getItem("Main Ingredient");
+
+var newRecipeTitle = [];
+newRecipeTitle.push(base.split('=')[1]);
+console.log(newRecipeTitle);
+
+
+
+var headerTitle = $('#recipe-header');
+headerTitle.text(`${newRecipeTitle}` + "  " + "Recipes")
+
+
+
 console.log(base)
 getApi();
 
