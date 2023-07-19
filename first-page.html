@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Group Project 1</title>
+  <title>Recipe Finder</title>
   <link rel="stylesheet" href="./assets/css/firstpagestyle.css" />
   <link rel="stylesheet" href="./assets/css/reset.css" />
    <!-- bootstrap link for desgin -->
@@ -23,13 +23,14 @@
           <h5 class="card-title">Get Recipe by Main Ingredient</h5>
           <p class="card-text">Want to find a recipe based off what you have in the fridge? Click below!</p>
           <select class="form-select" aria-label="Default select example">
-            <option selected>Select Main Ingredient</option>
+            <option value="" disabled selected hidden>Main Ingredient</option>
             <option value="Chicken">Chicken</option>
             <option value="Beef">Beef</option>
             <option value="Salmon">Salmon</option>
             <option value="Pork">Pork</option>
+            <option value="Lamb">Lamb</option>
           </select>
-          <button class="mainBtn" type="submit" onclick="document.location='index.html'">submit</button>
+          <button class="mainBtn" type="submit" onclick="document.location='index.html'">Submit</button>
         </div>
       </div>
     </div>
@@ -39,7 +40,7 @@
           <h5 class="card-title">Get Random Recipe</h5>
           <p class="card-text">Don't know what to make for dinner? Click below to generate a random recipe.</p>
           <!-- updated to move to the random recipe wbepage -->
-          <button class="randomBtn" type="submit" onclick="document.location='recipe-page.html'">submit</button>
+          <button class="randomBtn" type="submit" onclick="document.location='random.html'">Submit</button>
         </div>
       </div>
     </div>
@@ -49,6 +50,7 @@
   <footer>
     <h2>Footer</h2>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/js/firstpage.js"></script>
   <script src="./assets/js/script.js"></script> 
 </body>

@@ -35,7 +35,7 @@ function getApi() {
 
         // adds coocking instructions
         var instructions = meal.strInstructions.replace(/(?:\r\n|\r|\n)/g, '');
-        for (i = 0; i <= ingredients.length; i++) {
+        for (i = 0; i <= 50; i++) {
             var newInstructions = [];
             newInstructions.push(instructions.split('.')[i]);
             $('#cooking-instructions').append(`<p id='instructions${i}' class='instruction-text'>${newInstructions}</p>`)
