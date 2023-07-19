@@ -18,19 +18,17 @@
 <body>
   
   <header>
-    <h1>Recipe Finder</h1>
+    <h1>Recipe</h1>
     <nav>
-      <ul>
-        <li><button class="backBtn" type="submit" onclick="document.location='first-page.html'">Back to Home Page</button></li>
+        <button class="backBtn" type="submit" onclick="document.location='first-page.html'">Back to Home Page</button>
 
-        <li><button class="backBtn" type="submit" onclick="document.location='index.html'">Back to Previous Page</button></li>
-      </ul>
+        <button class="backBtn" type="submit" onclick="document.location='index.html'">Back to Previous Page</button>
     </nav>
   </header>
 
   <div class="container-fluid text-center">
     <div class="row align-items-start" id="recipe-row">
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-12">
         <div class="card animate__animated animate__fadeInLeftBig">
           <div class="card-body">
             <h5 id="card-title"></h5>
@@ -42,7 +40,7 @@
         <h4>Cooking Instructions:</h4>
         <p id="cooking-instructions"></p>
       </div>
-      <div class="col-lg-2 col-md-12 animate__animated animate__fadeInRightBig">
+      <div class="col-lg-3 col-md-12 animate__animated animate__fadeInRightBig">
         <table class="table table-success table-striped" id="ingredients-tbody">
           <h4>Ingredients:</h4>
           <tr>

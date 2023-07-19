@@ -12,8 +12,9 @@ header {
   background-color: darkslategrey;
   color:antiquewhite;
   width: 100%;
-  height: 300px;
+  height: 150px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
@@ -28,24 +29,4 @@ header h1{
   font-size: 20px;
 }
 
-/* updated heading format for back button and new recipe button */
-header nav {
-  float: right;
-  font-size: 20px;
-}
-
-header nav ul {
-  list-style-type: none;
-}
-
-header nav ul li {
-  display: inline-block;
-  margin-left: 25px;
-}
-
-header nav ul li button {
-  background-color: antiquewhite;
-  color: darkslategrey;
-}
-/* updated heading format for back button and new recipe button */
 
