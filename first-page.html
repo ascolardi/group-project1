@@ -20,7 +20,7 @@
   </header>
 
   <div class="row">
-    <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="col-sm-4 mb-3 mb-sm-0">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Get Recipe by Main Ingredient</h5>
@@ -32,10 +32,10 @@
             <option value="i=Bacon">Bacon</option>
             <option value="i=Beef">Beef</option>
             <option value="i=Chicken">Chicken</option>
+            <option value="i=Goat Meat">Goat</option>
             <option value="i=Pork">Pork</option>
             <option value="i=Rice">Rice</option>
-            <option value="i=Salmon">Salmon</option>
-            <option value="i=Sweet Potatoes">Sweet Potatoes</option>
+            <option value="i=Salmon">Salmon</option>            
             <option value="i=Tofu">Tofu</option>
             <option value="i=Vegetable">Vegetable</option>          
           </select>
@@ -43,7 +43,28 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Get Recipe by Category</h5>
+          <p class="card-text">Here you can sort recipes based on category</p>
+          <select class="form-select" aria-label="Default select example">
+            <option value="" disabled selected hidden>Category</option>            
+            <option value="c=Breakfast">Breakfast</option>            
+            <option value="c=Dessert">Dessert</option>
+            <option value="c=Miscellaneous">Miscellaneous</option>
+            <option value="c=Pasta">Pasta</option>
+            <option value="c=Seafood">Seafood</option>
+            <option value="c=Side">Side</option>
+            <option value="c=Starter">Starter</option>
+            <option value="c=Vegan">Vegan</option>
+            <option value="c=Vegetarian">Vegetarian</option>           
+          </select>
+          <button id="category-select" class="categoryBtn" type="submit" onclick="document.location='index.html'">Submit</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Get Random Recipe</h5>
