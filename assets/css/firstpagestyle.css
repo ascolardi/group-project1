@@ -1,4 +1,6 @@
-
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
 header {
   background-color: darkslategrey;
   color:antiquewhite;
