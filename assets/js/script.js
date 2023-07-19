@@ -24,7 +24,7 @@ function getApi() {
         var mealImage = data.meals[i].strMealThumb
         
         console.log(data)
-        // console.log(meals)
+        console.log(meals)
         // console.log(mealImage)
         // console.log(mealId)
       
@@ -32,7 +32,7 @@ function getApi() {
             
         
           var newCard = `<div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                          <img src = "${mealImage}" id="cardImg${i}" class="card-img-top">
+                          <img src = "${mealImage}" id="cardImg${i}" class="card-img-top animate__animated animate__flipInX">
                          <div class = "card-body">
                           <h2 class = "card-text">${meals}</h2>
                           <button data-meal="${mealId}" class="recipe-button" type="button" class="btn btn-primary">See Recipe</button>
