@@ -10,7 +10,7 @@ getApi();
 function getApi() {  
   // fetch request gets a list of all the repos for the
   //node.js organization
-  var requestUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${base}`;
+  var requestUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?${base}`;
 
   fetch(requestUrl)
     .then(function (response) {
