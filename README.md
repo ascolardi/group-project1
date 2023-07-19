@@ -9,8 +9,6 @@ Annelise Scolardi
 Aidan Windebank  
 Michael Engstrand
 
-# Link to Deployed Webpage
-
 # User Story
 
 GIVEN a food recipe website that allows users to search by main ingredient, meal name, or be given a random meal.  
@@ -33,6 +31,7 @@ The webpage must not have any bugs or error codes in the dev console.
 
 # Screenshot
 
+<img width="1440" alt="webpagescreenshot" src="https://github.com/ascolardi/group-project1/assets/133730772/2536d708-8991-4cc7-a624-343ca0a8d34d">
 
 # Link to deployed URL
 
