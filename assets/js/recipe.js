@@ -4,7 +4,7 @@ const ingredients = []
 
 function getApi() {
     // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + recipeId;
+    var requestUrl = 'https://www.themealdb.com/api/json/v1/1/lookup.php?' + recipeId;
     fetch(requestUrl).then(function (res) {
         return res.json()
     }).then(function (data) {
@@ -20,7 +20,7 @@ function getApi() {
         var mealPic = $('#food-image');
         mealPic.attr('src', mealImage);
    
-
+        //gets the ingredients and measurements and puts them in an object for later use.  Stops if there is an empty string in the data.
         for(i=1; i<=20; i++){
             const obj = { ingredient: "", measure: "" }
             if( meal[`strIngredient${i}`] && meal[`strMeasure${i}`] ){
@@ -33,7 +33,7 @@ function getApi() {
             }
         }
 
-        // adds coocking instructions
+        // 
         var instructions = meal.strInstructions.replace(/(?:\r\n|\r|\n)/g, '');
         for (i = 0; i <= 50; i++) {
             var newInstructions = [];
