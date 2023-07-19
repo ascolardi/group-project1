@@ -9,7 +9,7 @@ function getApi() {
         return res.json()
     }).then(function (data) {
         var meal = data.meals[0]
-
+        console.log(data.meals[0])
         // adds meal name to top of page
         var mealName = meal.strMeal;
         var mealTitle = $('#card-title');
