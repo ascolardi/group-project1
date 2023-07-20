@@ -17,3 +17,4 @@ categoryButton.addEventListener('click', function(){
   localStorage.setItem("Main Ingredient", proteinEl);
 })
 
+// console.log(proteinEl)
