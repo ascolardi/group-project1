@@ -44,19 +44,14 @@ function getApi() {
     })
 }
 
+//Gets the ingredient and measurement from the ingredients array and pushed them to a new array which is then appended to a table which displays on the instructions page
 function showIngredients() {
     for (x = 0; x < ingredients.length; x++) {
         var ingred = []
         var amounts = []
         ingred.push(ingredients[`${x}`].ingredient)
         amounts.push(ingredients[`${x}`].measure)
-         
-        console.log(ingredients[`${x}`]);
-        console.log(ingred)
-        console.log(amounts)
-
-    
-
+   
     var newRow = `<tr>
                     <td>${ingred}
                     <td>${amounts}
