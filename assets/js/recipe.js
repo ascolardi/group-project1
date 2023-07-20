@@ -44,7 +44,35 @@ function getApi() {
     })
 }
 
-getApi();
-        
+function showIngredients() {
+    for (x = 0; x < ingredients.length; x++) {
+        var ingred = []
+        var amounts = []
+        ingred.push(ingredients[`${x}`].ingredient)
+        amounts.push(ingredients[`${x}`].measure)
+         
+        console.log(ingredients[`${x}`]);
+        console.log(ingred)
+        console.log(amounts)
+
+    
+
+    var newRow = `<tr>
+                    <td>${ingred}
+                    <td>${amounts}
+                  </tr>`  
+    
+    $('#ingredients-tbody').append(newRow);
+    }              
+}
+
+getApi()
+
+
+
+
+
+
+
 
 
