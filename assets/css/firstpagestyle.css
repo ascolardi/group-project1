@@ -23,10 +23,6 @@ div.row{
   padding: 40px;
 }
 
-/* #btn2{
-  background-color: darkslategrey;
-} */
-
 .mainBtn{
   background-color: darkslategrey;
   color:antiquewhite;
@@ -42,7 +38,7 @@ div.row{
   padding-right: 3px;
   margin-top: 5px;
 }
-/* updated random button to match formatting */
+
 .randomBtn{
   background-color: darkslategrey;
   color:antiquewhite;
