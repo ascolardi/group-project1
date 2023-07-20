@@ -15,10 +15,10 @@ var categoryButton = document.querySelector(".categoryBtn");
 
 categoryButton.addEventListener('click', function(){
   var proteinEl = formEl.value;
-  //var text = formEl.options[formEl.selectedIndex].value;
+  // var text = formEl.options[formEl.selectedIndex].value;
   localStorage.setItem("Main Ingredient", proteinEl);
   console.log(proteinEl)
 
 })
 
-console.log(proteinEl)
+// console.log(proteinEl)
