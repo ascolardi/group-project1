@@ -2,6 +2,10 @@
 
 A food recipe website that allows users to search by main ingredient, meal name, or be given a random meal.
 
+# Deployed Webpage URL
+
+https://ascolardi.github.io/group-project1/
+
 # Group Members
 
 Ben Poole  
