@@ -6,20 +6,15 @@ var base = localStorage.getItem("Main Ingredient");
 
 var newRecipeTitle = [];
 newRecipeTitle.push(base.split('=')[1]);
-console.log(newRecipeTitle);
-
-
 
 var headerTitle = $('#recipe-header');
 headerTitle.text(`${newRecipeTitle}` + "  " + "Recipes")
 
 
-
-console.log(base)
 getApi();
 
 
-function getApi() {  
+function getApi(requestUrl) {  
   // fetch request gets a list of all the repos for the
   //node.js organization
   var requestUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?${base}`;
@@ -35,8 +30,8 @@ function getApi() {
         var meals = data.meals[i].strMeal
         var mealImage = data.meals[i].strMealThumb
         
-        console.log(data)
-        console.log(meals)
+        // console.log(data)
+        // console.log(meals)
         // console.log(mealImage)
         // console.log(mealId)
       

@@ -20,4 +20,4 @@ categoryButton.addEventListener('click', function(){
 
 })
 
-console.log(proteinEl)
+// console.log(proteinEl)

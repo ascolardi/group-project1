@@ -16,7 +16,16 @@
 
 <body>
   <header>
-    <h1>Recipe Finder</h1>
+    <div class="container-fluid row text-center">
+        <div class="d-flex cloumn justify-content-center">
+          <img src="./assets/images/restaurant.png" id="fork-pic">
+          <h1>Recipe Finder</h1>
+          <img src="./assets/images/restaurant.png" id="fork-pic">
+        </div>
+      <div>
+        <h3>Use This Recipe Database to Find Something New</h3>
+      </div>
+    </div>
   </header>
 
   <div class="row">
@@ -25,7 +34,7 @@
         <div class="card-body">
           <h5 class="card-title">Get Recipe by Main Ingredient</h5>
           <p class="card-text">Want to find a recipe based off what you have in the fridge? Click below!</p>
-          <select class="form-select" aria-label="Default select example">
+          <select id="main-ingredient" class="form-select" aria-label="Default select example">
             <option value="" disabled selected hidden>Main Ingredient</option>
             <option value="i=Aubergine">Aubergine(Eggplant)</option>
             <option value="i=Avocado">Avocado</option>
