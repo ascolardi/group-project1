@@ -31,7 +31,9 @@ The webpage must not have any bugs or error codes in the dev console.
 
 # Screenshot
 
-<img width="1440" alt="webpagescreenshot" src="https://github.com/ascolardi/group-project1/assets/133730772/2536d708-8991-4cc7-a624-343ca0a8d34d">
+<img width="1440" alt="webpagess" src="https://github.com/ascolardi/group-project1/assets/133730772/468c397e-78ca-4d28-ba5d-896d7ba1dca5">
 
-# Link to deployed URL
 
+# Link to Deployed Webpage
+
+https://ascolardi.github.io/group-project1/
