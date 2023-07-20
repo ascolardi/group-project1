@@ -20,6 +20,6 @@ function grabVal(formEl) {
     alert("Please select something from dropdown menu");
   } else{
     localStorage.setItem("Main Ingredient", proteinEl);
-    window.location = 'list-page.html'
+    window.location = './list-page.html'
   }
 }
