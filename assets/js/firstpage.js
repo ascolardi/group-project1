@@ -1,20 +1,25 @@
 //this page gets the value of the submissions on the index page and passes it to local storage
 
-var fetchButton = document.getElementById('button');
 var formBtn = document.querySelector(".mainBtn");
-var formEl = document.querySelector(".form-select");
 
 formBtn.addEventListener('click', function(){  
-  var proteinEl = formEl.value;
-  localStorage.setItem("Main Ingredient", proteinEl);
+  var formEl = document.querySelector(".form-select");
+  grabVal(formEl)
 })
 
 var categoryButton = document.querySelector(".categoryBtn");
 
 categoryButton.addEventListener('click', function(){
   var formEl = document.getElementById("category-form");
-  var proteinEl = formEl.value;
-  localStorage.setItem("Main Ingredient", proteinEl);
+  grabVal(formEl)
 })
 
-// console.log(proteinEl)
+function grabVal(formEl) {
+  var proteinEl = formEl.value;
+  if(!proteinEl){
+    alert("Please select something from dropdown menu");
+  } else{
+    localStorage.setItem("Main Ingredient", proteinEl);
+    window.location = 'list-page.html'
+  }
+}
